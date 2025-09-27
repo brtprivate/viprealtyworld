@@ -55,7 +55,14 @@ const Navbar = () => {
           href="/"
           className="text-2xl font-bold text-gray-900 hover:text-pink-500 transition-colors duration-300"
         >
-          VipRealty
+          <div className="relative w-64 h-20">
+            <Image
+              src="/images/logo.png"
+              alt="VipRealty Logo"
+              fill
+              className="object-contain"
+            />
+          </div>
         </Link>
 
         {/* Desktop Navigation Items */}
@@ -109,7 +116,7 @@ const Navbar = () => {
             className="text-2xl font-bold text-gray-900"
             onClick={closeMenu}
           >
-            <div className="relative w-32 h-10">
+            <div className="relative w-64 h-20">
               <Image
                 src="/images/logo.png"
                 alt="VipRealty Logo"
@@ -122,6 +129,7 @@ const Navbar = () => {
           <button
             onClick={closeMenu}
             className="p-2 rounded-md text-gray-800 hover:text-pink-500 hover:bg-gray-100 transition-colors duration-300"
+            aria-label="Close menu"
           >
             <X className="w-6 h-6 animate-spin-once" />
           </button>
@@ -149,7 +157,9 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-      <style jsx global>{`
+
+      {/* Custom Animations */}
+      <style jsx>{`
         .animate-spin-once {
           animation: spin 0.3s ease-in-out;
         }
