@@ -1,0 +1,5 @@
+- [x] Update section padding from py-20 to py-24 in Clinets.jsx
+- [x] Increase header bottom margin from mb-16 to mb-20 in Clinets.jsx
+- [x] Increase card padding from p-6 to p-8 in Clinets.jsx
+- [x] Increase text bottom margin from mb-6 to mb-8 in Clinets.jsx
+- [x] Increase flex gap from gap-4 to gap-6 in Clinets.jsx
