@@ -4,7 +4,7 @@ const Offer = () => {
     const offers = [
         {
             id: 1,
-            image: "/images/Offer/Offer-1.png",
+            image: "/images/Offer/ Offer-1.png",
             price: "$3,050",
             originalPrice: "$10,000",
             beds: 3,
