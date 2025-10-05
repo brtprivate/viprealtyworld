@@ -1,24 +1,24 @@
 const People = () => {
   const stats = [
     {
-      number: "305",
-      label: "Area",
-      sublabel: "Population"
+      number: "1000+",
+      label: "Properties",
+      sublabel: "Listed"
     },
     {
-      number: "1,090",
-      label: "Total",
-      sublabel: "Properties"
+      number: "500+",
+      label: "Happy",
+      sublabel: "Clients"
     },
     {
-      number: "209",
-      label: "Average",
-      sublabel: "House"
+      number: "15+",
+      label: "Years",
+      sublabel: "Experience"
     },
     {
-      number: "67",
-      label: "Total",
-      sublabel: "Branches"
+      number: "100%",
+      label: "Customer",
+      sublabel: "Satisfaction"
     }
   ];
 
@@ -46,31 +46,45 @@ const People = () => {
           <div className="lg:pl-8">
             {/* Main Heading */}
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
-              We Put People First.
+              Why Choose VIP Realty?
             </h2>
             
             {/* Description Paragraphs */}
             <div className="space-y-6 text-gray-600 leading-relaxed">
               <p>
-                A small river named Duden flows by their place and supplies it with the necessary 
-                regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your 
-                mouth.
+                At VIP Realty, we are a trusted name in Greater Noida real estate with over 15 years of experience. 
+                We specialize in residential homes, commercial spaces, plots, luxury villas, and rental solutions 
+                across Delhi NCR including Greater Noida, Jewar, Mathura, and Agra.
               </p>
               
-              <p>
-                On her way she met a copy. The copy warned the Little Blind Text, that where it came 
-                from it would have been rewritten a thousand times and everything that was left from 
-                its origin would be the word "and" and the Little Blind Text should turn around and 
-                return to its own, safe country. But nothing the copy said could convince her and so it 
-                didn't take long until a few insidious Copy Writers ambushed her, made her drunk with 
-                Longe and Parole and dragged her into their agency, where they abused her for their.
-              </p>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                  <span>Trusted name in Greater Noida real estate</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                  <span>Transparent and hassle-free process</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                  <span>Extensive property listings</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                  <span>Personalized guidance & support</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                  <span>100% customer satisfaction</span>
+                </div>
+              </div>
             </div>
 
             {/* Call to Action Button */}
             <div className="mt-8">
               <button className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
-                Learn More About Us
+                Contact Us Today
               </button>
             </div>
           </div>

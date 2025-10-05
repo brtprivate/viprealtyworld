@@ -2,23 +2,23 @@ const Works = () => {
     const steps = [
         {
             number: "01",
-            title: "Evaluate Property",
-            description: "A small river named Duden flows by their place and supplies it with the necessary regelialia."
+            title: "Property Consultation",
+            description: "Connect with our expert team to discuss your requirements and get personalized property recommendations."
         },
         {
             number: "02",
-            title: "Meet Your Agent",
-            description: "A small river named Duden flows by their place and supplies it with the necessary regelialia."
+            title: "Site Visit & Evaluation",
+            description: "Visit shortlisted properties with our agents and get detailed evaluation including legal verification."
         },
         {
             number: "03",
-            title: "Close the Deal",
-            description: "A small river named Duden flows by their place and supplies it with the necessary regelialia."
+            title: "Documentation & Legal",
+            description: "Complete transparent documentation process with our legal experts ensuring hassle-free transactions."
         },
         {
             number: "04",
-            title: "Have Your Property",
-            description: "A small river named Duden flows by their place and supplies it with the necessary regelialia."
+            title: "Key Handover",
+            description: "Receive your property keys and enjoy our post-purchase support for a seamless experience."
         }
     ];
 
@@ -43,11 +43,14 @@ const Works = () => {
                         {/* Section Header */}
                         <div className="mb-12">
                             <p className="text-pink-500 text-sm font-medium tracking-wider uppercase mb-4">
-                                WORK FLOW
+                                OUR PROCESS
                             </p>
                             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                                How it works
+                                How VIP Realty Works
                             </h2>
+                            <p className="text-gray-300 text-lg">
+                                Our transparent and hassle-free process ensures 100% customer satisfaction at every step.
+                            </p>
                         </div>
 
                         {/* Steps Grid */}

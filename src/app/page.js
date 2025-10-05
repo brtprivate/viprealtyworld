@@ -1,44 +1,44 @@
 
 'use client'
 import Hero from '../components/Hero';
+import About from '../components/Home/About';
 import Services from '../components/Home/Services';
 import Offer from '../components/Home/Offer';
+import Construction from '../components/Home/Construction';
+import Interiors from '../components/Home/Interiors';
 import Works from '../components/Home/Works';
 import People from '../components/Home/People';
-import Agents from '@/components/Home/Agents';
-import Blog from '@/components/Home/Blog';
-import Clients from '@/components/Home/Clinets';
+import Contact from '../components/Home/Contact';
 
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-// Dynamic imports for better performance
-// const Hero = dynamic(() => import('../components/Hero'), { ssr: true });
-// const Services = dynamic(() => import('../components/Home/Services'), { ssr: true });
-// const Offer = dynamic(() => import('../components/Home/Offer'), { ssr: true });
-// const Works = dynamic(() => import('../components/Home/Works'), { ssr: true });
-// const People = dynamic(() => import('../components/Home/People'), { ssr: true });
-// const Clients = dynamic(() => import('../components/Home/Clients'), { ssr: true });
-// const Agents = dynamic(() => import('../components/Home/Agents'), { ssr: true });
-// const Blog = dynamic(() => import('../components/Home/Blog'), { ssr: true });
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Animated Portfolio</title>
+        <title>VIP Realty - Your Dream Property Awaits in Greater Noida</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="A Next.js portfolio with smooth animations" />
+        <meta name="description" content="VIP Realty - Your trusted real estate partner for Residential, Commercial, Plots, Luxury Homes & Rentals in Greater Noida. Building Trust, One Property at a Time." />
       </Head>
       <div className="min-h-screen">
         <div className="animate-fade-in">
           <Hero />
         </div>
         <div className="animate-slide-up">
-          <Services />
+          <About />
         </div>
         <div className="animate-scale-in">
+          <Services />
+        </div>
+        <div className="animate-fade-in">
           <Offer />
+        </div>
+        <div className="animate-slide-up">
+          <Construction />
+        </div>
+        <div className="animate-scale-in">
+          <Interiors />
         </div>
         <div className="animate-fade-in">
           <Works />
@@ -47,13 +47,7 @@ export default function Home() {
           <People />
         </div>
         <div className="animate-scale-in">
-          <Clients />
-        </div>
-        <div className="animate-fade-in">
-          <Agents />
-        </div>
-        <div className="animate-slide-up">
-          <Blog />
+          <Contact />
         </div>
       </div>
       <style jsx global>{`

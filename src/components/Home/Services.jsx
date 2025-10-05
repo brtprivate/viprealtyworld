@@ -1,26 +1,26 @@
-import { PiggyBank, Wallet, FileText, Lock } from 'lucide-react';
+import { Home, Building, MapPin, Hammer, Palette, Users } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
-      icon: <PiggyBank className="w-12 h-12 text-pink-500" />,
-      title: "No Downpayment",
-      description: "A small river named Duden flows by their place and supplies it with the necessary regelialia."
+      icon: <Home className="w-12 h-12 text-pink-500" />,
+      title: "Property Purchase & Sales",
+      description: "Villas, rental flats, apartments, luxury apartments, and agricultural land in Delhi NCR (Greater Noida, Jewar, Mathura, Agra)."
     },
     {
-      icon: <Wallet className="w-12 h-12 text-pink-500" />,
-      title: "All Cash Offer",
-      description: "A small river named Duden flows by their place and supplies it with the necessary regelialia."
+      icon: <Hammer className="w-12 h-12 text-pink-500" />,
+      title: "Construction Services",
+      description: "New building construction, renovations, and remodeling supervised by top engineers to ensure highest quality."
     },
     {
-      icon: <FileText className="w-12 h-12 text-pink-500" />,
-      title: "Experts in Your Corner",
-      description: "A small river named Duden flows by their place and supplies it with the necessary regelialia."
+      icon: <Palette className="w-12 h-12 text-pink-500" />,
+      title: "Interiors & Facade Work",
+      description: "Interior design and facade work with in-house manufacturing of glass and facade systems for custom solutions."
     },
     {
-      icon: <Lock className="w-12 h-12 text-pink-500" />,
-      title: "Locked in Pricing",
-      description: "A small river named Duden flows by their place and supplies it with the necessary regelialia."
+      icon: <Users className="w-12 h-12 text-pink-500" />,
+      title: "Trusted Partnership",
+      description: "Transparent and hassle-free process with personalized guidance & support ensuring 100% customer satisfaction."
     }
   ];
 
@@ -33,8 +33,11 @@ const Services = () => {
             OUR SERVICES
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            The smartest way to buy a home
+            Building Trust, One Property at a Time
           </h2>
+          <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+            At VIP Realty, we believe that real estate is more than just property – it's about building dreams, securing futures, and creating lasting value.
+          </p>
         </div>
 
         {/* Services Grid */}

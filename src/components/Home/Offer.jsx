@@ -5,36 +5,36 @@ const Offer = () => {
   const offers = [
     {
       id: 1,
-      image: "/images/Offer/Offer-1.png",
-      price: "$3,050",
-      originalPrice: "$10,000",
+      image: "/images/prop/a.png",
+      price: "₹85 Lakh",
+      originalPrice: "₹95 Lakh",
       beds: 3,
       baths: 2,
-      sqft: "1,878 sqft",
-      title: "The Blue Sky Home",
-      location: "Oakland",
+      sqft: "1,200 sqft",
+      title: "Luxury Villa",
+      location: "Greater Noida",
     },
     {
       id: 2,
-      image: "/images/Offer/Offer-2.png",
-      price: "$3,050",
-      originalPrice: "$10,000",
-      beds: 3,
+      image: "/images/prop/b.png",
+      price: "₹45 Lakh",
+      originalPrice: "₹50 Lakh",
+      beds: 2,
       baths: 2,
-      sqft: "1,878 sqft",
-      title: "The Blue Sky Home",
-      location: "Oakland",
+      sqft: "900 sqft",
+      title: "Premium Apartment",
+      location: "Gaur Yamuna City",
     },
     {
       id: 3,
-      image: "/images/Offer/Offer-3.png",
-      price: "$3,050",
-      originalPrice: "$10,000",
-      beds: 3,
-      baths: 2,
-      sqft: "1,878 sqft",
-      title: "The Blue Sky Home",
-      location: "Oakland",
+      image: "/images/prop/c.png",
+      price: "₹25 Lakh",
+      originalPrice: "₹30 Lakh",
+      beds: 1,
+      baths: 1,
+      sqft: "600 sqft",
+      title: "Studio Apartment",
+      location: "Greater Noida West",
     },
   ];
 
@@ -44,11 +44,14 @@ const Offer = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <p className="text-pink-500 text-sm font-medium tracking-wider uppercase mb-4">
-            WHAT WE OFFER
+            PROPERTY SOLUTIONS
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Exclusive Offer For You
+            Find Your Perfect Property with VIP Realty
           </h2>
+          <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+            We offer villas, rental flats, apartments, luxury apartments, and agricultural land in Delhi NCR. Our team ensures smooth transactions from start to finish.
+          </p>
         </div>
 
         {/* Offers Grid */}

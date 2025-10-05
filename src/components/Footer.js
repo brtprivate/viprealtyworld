@@ -4,11 +4,11 @@ const Footer = () => {
   return (
     <footer className="bg-gray-50 border-t border-gray-200 pt-16 pb-8 mt-auto">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12">
-        {/* Uptown Section */}
+        {/* VIP Realty Section */}
         <div>
-          <h3 className="text-xl font-bold mb-4 text-gray-900">Uptown</h3>
+          <h3 className="text-xl font-bold mb-4 text-gray-900">VIP Realty</h3>
           <p className="text-gray-600 leading-relaxed text-sm mb-6">
-            Far far away, behind the word mountains, far from the countries.
+            Your trusted real estate partner for Residential, Commercial, Plots, Luxury Homes & Rentals in Greater Noida.
           </p>
 
           {/* Social Links */}
@@ -40,11 +40,11 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Community Section */}
+        {/* Services Section */}
         <div>
-          <h3 className="text-xl font-bold mb-4 text-gray-900">Community</h3>
+          <h3 className="text-xl font-bold mb-4 text-gray-900">Our Services</h3>
           <ul className="space-y-2">
-            {["Search Properties", "For Agents", "Reviews", "FAQs"].map(
+            {["Property Purchase & Sales", "Construction Services", "Interior & Facade Work", "Rental Solutions"].map(
               (item, idx) => (
                 <li key={idx}>
                   <a
@@ -59,11 +59,11 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* About Us Section */}
+        {/* Property Types Section */}
         <div>
-          <h3 className="text-xl font-bold mb-4 text-gray-900">About Us</h3>
+          <h3 className="text-xl font-bold mb-4 text-gray-900">Property Types</h3>
           <ul className="space-y-2">
-            {["Our Story", "Meet the Team", "Careers"].map((item, idx) => (
+            {["Villas & Luxury Apartments", "Apartments & Rental Flats", "Agricultural Land", "Studio Apartments"].map((item, idx) => (
               <li key={idx}>
                 <a
                   href="#"
@@ -76,11 +76,11 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Company Section */}
+        {/* Locations Section */}
         <div>
-          <h3 className="text-xl font-bold mb-4 text-gray-900">Company</h3>
+          <h3 className="text-xl font-bold mb-4 text-gray-900">Our Locations</h3>
           <ul className="space-y-2">
-            {["About Us", "Press", "Contact", "Careers"].map((item, idx) => (
+            {["Greater Noida", "Jewar", "Mathura", "Agra"].map((item, idx) => (
               <li key={idx}>
                 <a
                   href="#"
@@ -96,12 +96,14 @@ const Footer = () => {
         {/* Contact Section */}
         <div>
           <h3 className="text-xl font-bold mb-4 text-gray-900">
-            Have a Question?
+            Contact Us
           </h3>
           <div className="text-gray-600 text-sm space-y-2">
-            <p>203 Fake St. Mountain View, San Francisco, California, USA</p>
-            <p>+2 392 3929 210</p>
-            <p>info@yourdomain.com</p>
+            <p>22/1st B Park View, Gaur Yamuna City, Greater Noida, U.P. – 203201</p>
+            <p>+91 7017097608</p>
+            <p>+91 9667039965</p>
+            <p>info@viprealtynet.com</p>
+            <p>www.viprealtyworld.com</p>
           </div>
         </div>
       </div>
@@ -109,8 +111,8 @@ const Footer = () => {
       {/* Copyright */}
       <div className="border-t border-gray-200 mt-12 pt-6 text-center">
         <p className="text-gray-500 text-xs">
-          © {new Date().getFullYear()} Uptown. All rights reserved. | Built with{" "}
-          <span className="text-pink-500">♥</span> by Viprealtyworld
+          © {new Date().getFullYear()} VIP Realty. All rights reserved. | Built with{" "}
+          <span className="text-pink-500">♥</span> by VIP Realty World
         </p>
       </div>
     </footer>
