@@ -48,7 +48,7 @@ const Contact = () => {
             GET IN TOUCH
           </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Get in Touch with VIP Realty – We're Here to Help!
+            Get in Touch with VIP Realty – We&apos;re Here to Help!
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg">
             Contact us for buying, selling, renting, construction or interior projects.

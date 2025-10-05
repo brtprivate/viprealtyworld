@@ -11,6 +11,7 @@ import People from '../components/Home/People';
 import Contact from '../components/Home/Contact';
 
 import Head from 'next/head';
+import Clients from '@/components/Home/Clinets';
 
 
 export default function Home() {
@@ -45,6 +46,9 @@ export default function Home() {
         </div>
         <div className="animate-slide-up">
           <People />
+        </div>
+          <div className="animate-scale-in">
+          <Clients />
         </div>
         <div className="animate-scale-in">
           <Contact />

@@ -39,7 +39,7 @@ const ServicesPage = () => {
             Our Service Guarantee
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-            We're committed to providing exceptional service and ensuring your complete satisfaction
+            We&apos;re committed to providing exceptional service and ensuring your complete satisfaction
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

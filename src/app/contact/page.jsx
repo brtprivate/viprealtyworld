@@ -6,7 +6,7 @@ const ContactPage = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <Hero
-        title="Get in Touch with VIP Realty – We're Here to Help!"
+        title="Get in Touch with VIP Realty – We&apos;re Here to Help!"
         subtitle="Contact us for buying, selling, renting, construction or interior projects."
       />
 
@@ -47,7 +47,7 @@ const ContactPage = () => {
             Send us a Message
           </h2>
           <p className="text-center text-gray-600 mb-8">
-            We're here to help with all your real estate needs. Get in touch today!
+            We&apos;re here to help with all your real estate needs. Get in touch today!
           </p>
 
           <form className="space-y-6">
