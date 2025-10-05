@@ -70,7 +70,7 @@ const Interiors = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           <div className="relative overflow-hidden rounded-lg shadow-lg group">
             <img 
-              src="/images/Offer/Offer-1.png" 
+              src="/images/prop/a.png" 
               alt="Interior Design Project"
               className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
             />
@@ -81,7 +81,7 @@ const Interiors = () => {
           
           <div className="relative overflow-hidden rounded-lg shadow-lg group">
             <img 
-              src="/images/Offer/Offer-2.png" 
+              src="/images/prop/b.png" 
               alt="Facade Work Project"
               className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
             />
@@ -92,7 +92,7 @@ const Interiors = () => {
           
           <div className="relative overflow-hidden rounded-lg shadow-lg group">
             <img 
-              src="/images/Offer/Offer-3.png" 
+              src="/images/prop/c.png" 
               alt="Glass Work Project"
               className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
             />
