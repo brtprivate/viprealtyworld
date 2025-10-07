@@ -97,7 +97,7 @@ const Contact = () => {
           {/* Contact Information Cards */}
           <div className="lg:col-span-1 space-y-6">
             {contactInfo.map((info, index) => (
-              <div key={index} className="group bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/15 transition-all duration-300">
+              <div key={index} className="group  backdrop-blur-sm border border-white/20 p-6 rounded-2xl hover:bg-white/15 transition-all duration-300">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-pink-500 rounded-xl group-hover:scale-110 transition-transform duration-300">
                     {info.icon}
