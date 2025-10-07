@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -14,28 +14,36 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex gap-4">
             <a
-              href="#"
+              href="https://www.facebook.com/profile.php?id=61581794128938"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-500 hover:text-pink-500 transition-colors"
             >
               <Facebook size={18} />
             </a>
             <a
-              href="#"
+              href="https://x.com/VIP_Realty_"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-500 hover:text-pink-500 transition-colors"
             >
               <Twitter size={18} />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/viprealtyworld/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-500 hover:text-pink-500 transition-colors"
             >
               <Instagram size={18} />
             </a>
             <a
-              href="#"
+              href="https://www.youtube.com/@VIPREALTYWORLD"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-500 hover:text-pink-500 transition-colors"
             >
-              <Linkedin size={18} />
+              <Youtube size={18} />
             </a>
           </div>
         </div>

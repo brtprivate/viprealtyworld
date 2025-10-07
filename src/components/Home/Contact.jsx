@@ -1,6 +1,43 @@
+"use client";
+import { useState } from 'react';
 import { MapPin, Phone, Mail, Globe, Send, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      const result = await response.json();
+      if (result.success) {
+        alert('Message sent successfully!');
+        setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+      } else {
+        alert('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      alert('An error occurred. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   const contactInfo = [
     {
       icon: <MapPin className="w-6 h-6" />,
@@ -91,7 +128,7 @@ const Contact = () => {
             <div className="bg-white/10 backdrop-blur-lg border border-white/20 p-8 rounded-2xl shadow-2xl">
               <h3 className="text-2xl font-bold text-white mb-6">Send us a Message</h3>
 
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name & Email Row */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -102,6 +139,8 @@ const Contact = () => {
                       type="text"
                       id="name"
                       name="name"
+                      value={formData.name}
+                      onChange={handleChange}
                       required
                       className="w-full px-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent backdrop-blur-sm transition-all duration-300"
                       placeholder="Your full name"
@@ -115,6 +154,8 @@ const Contact = () => {
                       type="email"
                       id="email"
                       name="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       required
                       className="w-full px-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent backdrop-blur-sm transition-all duration-300"
                       placeholder="your.email@example.com"
@@ -132,6 +173,8 @@ const Contact = () => {
                       type="tel"
                       id="phone"
                       name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
                       required
                       className="w-full px-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent backdrop-blur-sm transition-all duration-300"
                       placeholder="+91 XXXXX XXXXX"
@@ -144,16 +187,18 @@ const Contact = () => {
                     <select
                       id="service"
                       name="service"
-                      className="w-full px-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent backdrop-blur-sm transition-all duration-300"
+                      value={formData.service}
+                      onChange={handleChange}
+                      className="w-full px-4 py-4 bg-gray-800/80 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent backdrop-blur-sm transition-all duration-300"
                     >
-                      <option value="" className="bg-gray-800">Select a service</option>
-                      <option value="residential" className="bg-gray-800">Residential Property</option>
-                      <option value="commercial" className="bg-gray-800">Commercial Property</option>
-                      <option value="plots" className="bg-gray-800">Plots</option>
-                      <option value="luxury" className="bg-gray-800">Luxury Homes</option>
-                      <option value="rental" className="bg-gray-800">Rental Properties</option>
-                      <option value="construction" className="bg-gray-800">Construction Services</option>
-                      <option value="interiors" className="bg-gray-800">Interior Design</option>
+                      <option value="" className="bg-gray-800 text-white">Select a service</option>
+                      <option value="residential" className="bg-gray-800 text-white">Residential Property</option>
+                      <option value="commercial" className="bg-gray-800 text-white">Commercial Property</option>
+                      <option value="plots" className="bg-gray-800 text-white">Plots</option>
+                      <option value="luxury" className="bg-gray-800 text-white">Luxury Homes</option>
+                      <option value="rental" className="bg-gray-800 text-white">Rental Properties</option>
+                      <option value="construction" className="bg-gray-800 text-white">Construction Services</option>
+                      <option value="interiors" className="bg-gray-800 text-white">Interior Design</option>
                     </select>
                   </div>
                 </div>
@@ -166,9 +211,11 @@ const Contact = () => {
                   <textarea
                     id="message"
                     name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     rows={5}
                     required
-                    className="w-full px-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent backdrop-blur-sm resize-vertical transition-all duration-300"
+                    className="w-full px-4 py-4 bg-gray-800/80 border border-white/20 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent backdrop-blur-sm resize-vertical transition-all duration-300"
                     placeholder="Tell us about your requirements, budget, preferred location..."
                   ></textarea>
                 </div>
@@ -176,10 +223,20 @@ const Contact = () => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-pink-500 hover:bg-pink-600 text-white py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
+                  disabled={isSubmitting}
+                  className="w-full bg-pink-500 hover:bg-pink-600 disabled:bg-gray-500 disabled:cursor-not-allowed text-white py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
                 >
-                  <Send className="w-5 h-5" />
-                  Send Message
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5" />
+                      Send Message
+                    </>
+                  )}
                 </button>
               </form>
             </div>

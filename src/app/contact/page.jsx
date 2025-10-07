@@ -1,7 +1,45 @@
+"use client";
+import { useState } from "react";
 import Hero from "@/components/common/Hero";
 import Services from "@/components/Home/Services";
 
 const ContactPage = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      const result = await response.json();
+      if (result.success) {
+        alert('Message sent successfully!');
+        setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+      } else {
+        alert('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      alert('An error occurred. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -50,7 +88,7 @@ const ContactPage = () => {
             We&apos;re here to help with all your real estate needs. Get in touch today!
           </p>
 
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -60,6 +98,8 @@ const ContactPage = () => {
                   type="text"
                   id="name"
                   name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   required
                   placeholder="Your full name"
                   className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent placeholder-gray-400"
@@ -74,6 +114,8 @@ const ContactPage = () => {
                   type="email"
                   id="email"
                   name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   required
                   placeholder="your.email@example.com"
                   className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent placeholder-gray-400"
@@ -90,6 +132,8 @@ const ContactPage = () => {
                   type="tel"
                   id="phone"
                   name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
                   required
                   placeholder="+91 XXXXX XXXXX"
                   className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent placeholder-gray-400"
@@ -103,6 +147,8 @@ const ContactPage = () => {
                 <select
                   id="service"
                   name="service"
+                  value={formData.service}
+                  onChange={handleChange}
                   className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
                 >
                   <option value="">Select a service</option>
@@ -125,6 +171,8 @@ const ContactPage = () => {
               <textarea
                 id="message"
                 name="message"
+                value={formData.message}
+                onChange={handleChange}
                 rows={5}
                 required
                 placeholder="Tell us about your requirements, budget, preferred location, or any specific questions you have..."
@@ -134,9 +182,10 @@ const ContactPage = () => {
 
             <button
               type="submit"
-              className="w-full bg-pink-500 text-white p-4 rounded-lg hover:bg-pink-600 transition-colors duration-300 font-semibold text-lg shadow-lg hover:shadow-xl"
+              disabled={isSubmitting}
+              className="w-full bg-pink-500 text-white p-4 rounded-lg hover:bg-pink-600 transition-colors duration-300 font-semibold text-lg shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Send Message
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>
